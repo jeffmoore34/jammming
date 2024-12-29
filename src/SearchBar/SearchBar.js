@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 
 const SearchBar = (props) => {
     const [term, setTerm] = useState('');
 
-    const handleTermChange = useEffect((event) => {
+    const handleTermChange = useCallback((event) => {
         setTerm(event.target.value);
     }, []);
 
-    const search = useEffect(() => {
+    const search = useCallback(() => {
         props.onSearch(term);
     }, [props.onSearch, term]);
 
