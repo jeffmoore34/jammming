@@ -29,8 +29,15 @@ const Track = (props) => {
     };
     return (
         <div>
-
+            <div>
+                <h3>{props.track.name}</h3>
+                <p>
+                    {props.track.artist} | {props.track.album}
+                </p>
+            </div>
+            {renderAction()}
         </div>
     );
 };
 
+export default Track;
