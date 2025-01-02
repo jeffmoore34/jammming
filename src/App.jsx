@@ -1,19 +1,18 @@
-import { useState, useCallback } from 'react';
-import './App.css';
+import React, { useState, useCallback } from "react";
+import "./App.css";
 
-import Playlist from './Playlist/Playlist';
-import SearchBar from './SearchBar/SearchBar';
-import SearchResults from './SearchResults/SearchResults';
-import Spotify from './Spotify/spotify';
-
+import Playlist from "./Playlist/Playlist";
+import SearchBar from "./SearchBar/SearchBar";
+import SearchResults from "./SearchResults/SearchResults"
+import Spotify from "./Spotify/spotify";
 
 const App = () => {
-  const [searchResults, setSearchResutls] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
   const search = useCallback((term) => {
-    Spotify.search(term).then(setSearchResutls);
+    Spotify.search(term).then(setSearchResults);
   }, []);
 
   const addTrack = useCallback(
