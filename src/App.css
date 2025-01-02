@@ -11,16 +11,16 @@ html {
 h1 {
   padding: 1.5rem 0;
   margin: 0;
-  background-color: #010c3f;
+  background-color: #121212;
   background-size: cover;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
-  color: #fff;
+  color: #1ED760;
 }
 
 h1 .highlight {
-  color: #6c41ec;
+  color: #fff;
 }
 
 h2 {
@@ -31,7 +31,7 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('/Users/Moores/CodeCademy Projects/jammming/public/billy-huynh-W8KTS-mhFUE-unsplash.jpg');
+  background-image: url('public/zac-bromell-mWYdMGrFzbc-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
