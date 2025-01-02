@@ -9,8 +9,10 @@ html {
 }
 
 h1 {
-  padding: .77rem 0;
+  padding: 1.5rem 0;
+  margin: 0;
   background-color: #010c3f;
+  background-size: cover;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
