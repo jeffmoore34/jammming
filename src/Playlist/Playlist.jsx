@@ -1,16 +1,25 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 
 import "./Playlist.css";
 
 import TrackList from "../TrackList/TrackList";
 
 const Playlist = (props) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleNameChange = useCallback(
     (event) => {
       props.onNameChange(event.target.value);
     },
     [props.onNameChange]
   );
+
+  // Handle save button click
+  const handleSave = async () => {
+    setIsLoading(true); // Start loading
+    await props.onSave(); // Wait for the save to complete
+    setIsLoading(false); // End loading
+  };
 
   return (
     <div className="Playlist">
@@ -20,9 +29,18 @@ const Playlist = (props) => {
         isRemoval={true}
         onRemove={props.onRemove}
       />
-      <button className="Playlist-save" onClick={props.onSave}>
-        SAVE TO SPOTIFY
-      </button>
+
+      {/* Conditionally render loading screen or save button */}
+      {isLoading ? (
+        <div className="loading-screen">
+          <p>Saving to Spotify...</p>
+          <div className="spinner"></div> {/* You can replace this with a spinner component */}
+        </div>
+      ) : (
+        <button className="Playlist-save" onClick={handleSave}>
+          SAVE TO SPOTIFY
+        </button>
+      )}
     </div>
   );
 };
