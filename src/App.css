@@ -31,7 +31,7 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('public/zac-bromell-mWYdMGrFzbc-unsplash.jpg');
+  background-image: url('src/assets/zac-bromell-mWYdMGrFzbc-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
